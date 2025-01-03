@@ -1,0 +1,28 @@
+<mat-card class="item-card">
+    <div class="item-header">
+        <div class="item-name">{{ item.name }}</div>
+        <div class="item-amount">{{ item.amount | currency:'INR' }}</div>
+    </div>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+        <div class="person-container" *ngFor="let person of item.people">
+            <div class="person-name">{{ person.name }}</div>
+            <div class="person-amount">{{ person.amount | currency:'INR' }}</div>
+            <button class="remove-person-button" mat-icon-button color="warn" (click)="removePerson(person.name)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+    </mat-card-content>
+    <mat-card-actions>
+        <div class="item-footer">
+            <input class="person-input" #personNameInput matInput [(ngModel)]="newPersonName" placeholder="Enter name"
+                (keydown.enter)="addPerson()" />
+            <button class="add-person-button" mat-raised-button color="primary" (click)="addPerson()">
+                Add Person
+            </button>
+            <button class="delete-item-button" mat-icon-button color="warn" (click)="removeItem()">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+    </mat-card-actions>
+</mat-card>

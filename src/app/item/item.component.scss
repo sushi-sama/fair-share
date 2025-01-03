@@ -1,0 +1,69 @@
+.item-card {
+  margin: 16px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.item-name {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.item-amount {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.person-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+}
+
+.person-name {
+  flex-grow: 1; /* This ensures the name takes as much space as needed on the left */
+}
+
+.person-amount {
+  text-align: right; /* Align the amount text to the right */
+  margin: 0 16px; /* Add space between the amount and the button */
+}
+
+.remove-person-button {
+  margin-left: auto; /* This pushes the button to the extreme right */
+}
+
+.item-footer {
+  display: flex;
+  gap: 16px; /* Adds space between the input and buttons */
+  width: 100%; /* Ensure the form takes up the full width of the container */
+}
+
+.person-input {
+  width: 200px; /* Set a fixed width for the input field */
+  height: 40px; /* Ensure input height */
+  padding: 0 10px; /* Optional padding */
+  font-size: 20px;
+}
+
+.add-person-button {
+  height: 40px; /* Ensure button height matches the input */
+  min-width: 120px; /* Minimum width for the button */
+  padding: 0 16px; /* Padding for button text */
+  box-sizing: border-box; /* Ensures padding is included in the height */
+}
+
+.delete-item-button {
+  margin-left: auto; /* Pushes the element to the extreme right */
+  margin-right: 8px;
+}
