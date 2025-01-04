@@ -98,10 +98,6 @@ export class AppComponent {
       alert('Please fill in all fields correctly.');
       return false;
     }
-    if (this.items.map((item) => item.name).includes(this.itemName)) {
-      alert('You have already added that item.');
-      return false;
-    }
     return true;
   }
 
