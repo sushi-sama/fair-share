@@ -1,5 +1,6 @@
 <div>
   <div class="app-header">
+    <mat-slide-toggle (change)="toggleDarkMode()"></mat-slide-toggle>
     <input class="item-name-input" #itemNameInput matInput placeholder="Enter item name" [(ngModel)]="itemName"
       (keydown.enter)="addItem()" />
     <input class="item-amount-input" matInput placeholder="Enter item amount" [(ngModel)]="itemAmount"

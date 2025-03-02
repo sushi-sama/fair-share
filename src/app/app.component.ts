@@ -10,6 +10,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ThemeService } from './theme.service';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +25,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatListModule,
     MatInputModule,
     MatButtonModule,
+    MatSlideToggleModule,
     FlexLayoutModule
   ],
   templateUrl: './app.component.html',
@@ -37,6 +40,12 @@ export class AppComponent {
   isBillCopiedToClipboard: boolean = false;
   totalBillAmount: number = 0;
   @ViewChild('itemNameInput') itemNameInputRef!: ElementRef;
+
+  constructor(private themeService: ThemeService) {}
+
+  toggleDarkMode() {
+    this.themeService.toggleTheme();
+  }
 
   addItem(): void {
     if (!this.isValidItem()) {

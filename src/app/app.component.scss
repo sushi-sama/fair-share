@@ -1,29 +1,29 @@
 .app-header {
   display: flex;
-  justify-content: center; /* Centers content horizontally */
-  align-items: center; /* Centers items vertically in the toolbar */
+  justify-content: center;
+  align-items: center;
   gap: 10px;
+  color: var(--text-color); /* Ensure header text changes color */
 }
 
-.item-name-input {
-  width: 300px;
-  height: 40px;
-  margin: 10px 0;
-  padding: 0 10px;
-  font-size: 25px;
-}
-
+.item-name-input,
 .item-amount-input {
   width: 300px;
   height: 40px;
   margin: 10px 0;
   padding: 0 10px;
   font-size: 25px;
+  background-color: var(--bg-color); /* Ensure inputs follow the theme */
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
 }
 
 .add-item-button {
   height: 40px;
   margin: 5px 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
 }
 
 .bill-container {
@@ -31,19 +31,23 @@
   border-radius: 8px;
   width: 100%;
   box-sizing: border-box;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .total-bill-amount {
   font-weight: bold;
   font-size: 30px;
+  color: var(--text-color);
 }
 
 .person-card {
   width: 100%;
-  background-color: #ffffff;
-  border: 1px solid #ccc;
+  background-color: var(--bg-color); /* Fix white background */
+  border: 1px solid var(--text-color);
   border-radius: 8px;
   margin-bottom: 16px;
+  color: var(--text-color);
 }
 
 .header-content {
@@ -53,6 +57,7 @@
   width: 100%;
   font-weight: bold;
   font-size: 25px;
+  color: var(--text-color);
 }
 
 .item-row {
@@ -61,14 +66,17 @@
   align-items: center;
   width: 100%;
   font-size: 20px;
+  color: var(--text-color);
 }
 
 .item-name {
   text-align: left;
-  flex-grow: 1; /* Ensures the name takes up the remaining space */
+  flex-grow: 1;
+  color: var(--text-color);
 }
 
 .contribution-amount {
   text-align: right;
-  min-width: 80px; /* Ensures consistent alignment */
+  min-width: 80px;
+  color: var(--text-color);
 }
